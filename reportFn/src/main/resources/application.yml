@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://terraform-20250130142506328200000003.cdqmgicaik8j.ap-south-1.rds.amazonaws.com:3306/mydb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: admin
+    password: Password123!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update  # Or 'create', 'create-drop', 'none' depending on your needs
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  sql:
+    init:
+      mode: always  # Optional: If you want Spring to run schema.sql at startup
+  logging:
+    level:
+      org:
+        hibernate: INFO  # Logs Hibernate-related SQL queries
+
+
+aws:
+  s3:
+    bucket: com.sks.lamda-bucket 
+  ses:
+    sender-email: "sunilsahu0123@gmail.com"
