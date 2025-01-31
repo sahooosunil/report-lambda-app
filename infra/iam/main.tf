@@ -18,3 +18,9 @@ resource "aws_iam_policy_attachment" "lambda_policy_attach" {
   roles      = [aws_iam_role.lambda_role.name]
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
+
+resource "aws_iam_policy_attachment" "lambda_vpc_access_attach" {
+  name       = "lambda_vpc_access_attachment"
+  roles      = [aws_iam_role.lambda_role.name]
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+}
