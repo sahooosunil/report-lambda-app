@@ -7,7 +7,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update  # Or 'create', 'create-drop', 'none' depending on your needs
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: org.hibernate.dialect.MySQLDialect
   sql:
     init:
       mode: always  # Optional: If you want Spring to run schema.sql at startup
