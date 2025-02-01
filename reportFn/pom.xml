@@ -111,8 +111,8 @@
 								<goal>shade</goal>
 							</goals>
 							<configuration>
+								<finalName>reportFn</finalName>
 								<transformers>
-									<!-- Set the correct Lambda Handler in MANIFEST -->
 									<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 										<mainClass>com.sks.reportFn.handler.ReportLambdaHandler</mainClass>
 									</transformer>
@@ -137,6 +137,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<mainClass></mainClass>
 					<layers>
 						<enabled>false</enabled>
 					</layers>
