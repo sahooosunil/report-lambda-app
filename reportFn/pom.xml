@@ -103,7 +103,6 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-shade-plugin</artifactId>
-					<version>2.1</version>
 					<executions>
 						<execution>
 							<phase>package</phase>
@@ -130,6 +129,7 @@
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<mainClass>com.example.MainApplication</mainClass>
+									<resource>src/main/resources/META-INF/MANIFEST.MF</resource>
 								</transformer>
 							</transformers>
 							</configuration>
